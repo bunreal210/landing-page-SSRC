@@ -17,6 +17,19 @@ const CLUB_CONFIG = {
 const projectsData = [
   {
     id: 1,
+    title: "Hệ thống Quản lý Phòng Thực hành STEM - PTTP (pttp.id.vn)",
+    category: "khkt",
+    categoryName: "Nền tảng Quản lý",
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+    summary: "Hệ thống số hóa chuyển đổi số phòng Lab STEM: Đặt lịch phòng, quản lý kho vật tư/linh kiện, mượn trả thiết bị và diễn đàn học thuật AI.",
+    image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
+    tech: ["Node.js", "Express 5", "better-sqlite3", "Gemini AI", "Session Auth", "REST API"],
+    year: "2024 - 2026",
+    authors: "Bùi Thắng & Đội ngũ Kỹ thuật PTTP",
+    description: "Nền tảng phần mềm quản lý toàn diện dành cho phòng nghiên cứu và thực hành STEM tại trường THPT Bắc Đông Quan. Hệ thống gồm các phân hệ chính: Đặt lịch thực hành theo thời khóa biểu, Quản lý kho linh kiện vi điều khiển (Arduino, ESP32, cảm biến, robot), Phiếu mượn trả và bàn giao thiết bị số hóa, Báo cáo sự cố bảo trì kèm ảnh, cùng Diễn đàn trao đổi học thuật tích hợp trí tuệ nhân tạo Gemini để kiểm duyệt thông minh. Vận hành chính thức tại pttp.id.vn."
+  },
+  {
+    id: 2,
     title: "Hệ thống Cảnh báo Cháy & Giám sát Môi trường IoT",
     category: "khkt",
     categoryName: "Nghiên cứu KHKT",
