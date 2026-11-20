@@ -17,12 +17,12 @@ const CLUB_CONFIG = {
 const projectsData = [
   {
     id: 1,
-    title: "Hệ thống Quản lý Phòng Thực hành STEM - PTTP (pttp.id.vn)",
+    title: "Hệ thống quản lý và vận hành phòng thực hành STEM",
     category: "khkt",
     categoryName: "Nền tảng Quản lý",
     badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
     summary: "Hệ thống số hóa chuyển đổi số phòng Lab STEM: Đặt lịch phòng, quản lý kho vật tư/linh kiện, mượn trả thiết bị và diễn đàn học thuật AI.",
-    image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
+    image: "https://drive.google.com/file/d/1dhOBH4Q4rZoWvvWIqrcSelfrHZ4QDYbl/view?usp=sharing",
     tech: ["Node.js", "Express 5", "better-sqlite3", "Gemini AI", "Session Auth", "REST API"],
     year: "2024 - 2026",
     authors: "Bùi Thắng & Đội ngũ Kỹ thuật PTTP",
