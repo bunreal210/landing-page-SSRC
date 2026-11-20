@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSSRC - CLB Nghiên cứu Khoa học, STEM & Robotics | THPT Bắc Đông Quan</title>
+  <meta name="description" content="Trang thông tin và lưu trữ dự án, thành tích của Câu lạc bộ Nghiên cứu khoa học, STEM và Robotics trường THPT Bắc Đông Quan (BSSRC).">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            creative: {
+              500: '#f97316',
+              600: '#ea580c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & School Name -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-700 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform overflow-hidden">
+            <!-- Nếu có ảnh logo 'assets/images/logo.png', trình duyệt sẽ tải ảnh, nếu không có sẽ hiển thị icon robot -->
+            <img src="assets/images/logo.png" alt="Logo BSSRC" class="w-full h-full object-contain p-1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <i data-lucide="bot" class="w-7 h-7 hidden"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-lg md:text-xl tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors font-tech">BSSRC</span>
+              <span class="text-[11px] font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full border border-blue-200">CLB</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium">THPT Bắc Đông Quan</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <a href="#home" class="hover:text-blue-600 transition-colors">Trang chủ</a>
+          <a href="#about" class="hover:text-blue-600 transition-colors">Về CLB</a>
+          <a href="#fields" class="hover:text-blue-600 transition-colors">Lĩnh vực</a>
+          <a href="#projects" class="hover:text-blue-600 transition-colors">Dự án</a>
+          <a href="#achievements" class="hover:text-blue-600 transition-colors">Thành tích</a>
+          <a href="#gallery" class="hover:text-blue-600 transition-colors">Hoạt động</a>
+          <a href="#contact" class="hover:text-blue-600 transition-colors">Liên hệ</a>
+        </nav>
+
+        <!-- CTA & Fanpage Button -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a id="nav-fanpage-btn" href="#contact" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl transition-all">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+            <span>Fanpage CLB</span>
+          </a>
+          <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-sm shadow-blue-500/20 hover:shadow-md transition-all">
+            <span>Kho Dự Án</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 text-sm font-semibold">
+      <a href="#home" class="block py-2 text-slate-700 hover:text-blue-600">Trang chủ</a>
+      <a href="#about" class="block py-2 text-slate-700 hover:text-blue-600">Về CLB</a>
+      <a href="#fields" class="block py-2 text-slate-700 hover:text-blue-600">Lĩnh vực</a>
+      <a href="#projects" class="block py-2 text-slate-700 hover:text-blue-600">Kho Dự án</a>
+      <a href="#achievements" class="block py-2 text-slate-700 hover:text-blue-600">Thành tích</a>
+      <a href="#gallery" class="block py-2 text-slate-700 hover:text-blue-600">Hình ảnh hoạt động</a>
+      <a href="#contact" class="block py-2 text-slate-700 hover:text-blue-600">Liên hệ & Fanpage</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden tech-grid-pattern">
+    <!-- Glow Background Accents -->
+    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-blue-300/30 to-cyan-200/20 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+    <div class="absolute -top-10 right-10 w-72 h-72 bg-orange-300/20 blur-2xl pointer-events-none -z-10 rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Intro & Slogan -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- School Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs md:text-sm font-semibold shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+            <span>Trường THPT Bắc Đông Quan • Đông Hưng, Thái Bình</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Khơi Nguồn Sáng Tạo <br>
+            <span class="gradient-text">Chinh Phục Công Nghệ</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Chào mừng bạn đến với <span class="font-bold text-slate-900">BSSRC</span> — Câu lạc bộ Nghiên cứu khoa học, STEM và Robotics. Nơi ươm mầm các ý tưởng khoa học kỹ thuật đột phá, chế tạo robot tự hành và ứng dụng công nghệ 4.0 ngay tại mái trường THPT Bắc Đông Quan.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-lg shadow-blue-600/25 hover:shadow-blue-600/35 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <i data-lucide="cpu" class="w-4 h-4"></i>
+              <span>Khám Phá Dự Án</span>
+            </a>
+            <a href="#achievements" class="px-6 py-3.5 text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-xs transition-all flex items-center gap-2">
+              <i data-lucide="trophy" class="w-4 h-4 text-orange-500"></i>
+              <span>Bảng Vàng Thành Tích</span>
+            </a>
+          </div>
+
+          <!-- Stats / Key Metrics -->
+          <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <div class="text-2xl md:text-3xl font-extrabold text-blue-700 font-tech counter-value" data-target="45">0</div>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">Thành viên nhiệt huyết</p>
+            </div>
+            <div>
+              <div class="text-2xl md:text-3xl font-extrabold text-cyan-600 font-tech counter-value" data-target="15">0</div>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">Dự án & Mô hình</p>
+            </div>
+            <div>
+              <div class="text-2xl md:text-3xl font-extrabold text-orange-500 font-tech counter-value" data-target="8">0</div>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">Giải thưởng KHKT</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Tech Card / Hero Graphic -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Main Hero Image Frame -->
+            <div class="glass-card p-3 rounded-3xl shadow-2xl relative z-10 floating-anim">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900">
+                <img 
+                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" 
+                  alt="Hoạt động chế tạo Robot STEM BSSRC" 
+                  class="w-full h-full object-cover opacity-90"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <span class="text-xs font-semibold px-2 py-0.5 bg-blue-600/90 rounded-md">Phòng Nghiên Cứu & Thực Hành</span>
+                  <p class="text-sm font-bold mt-1">Sáng tạo không rào cản cùng BSSRC</p>
+                </div>
+              </div>
+
+              <!-- Feature mini badge 1 -->
+              <div class="mt-3 p-3 bg-white/95 rounded-xl border border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-bold text-slate-800">STEM & Robotics</h5>
+                    <p class="text-[11px] text-slate-500">Chế tạo mô hình thực tế</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-md">4.0 Ready</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2 -->
+            <div class="absolute -bottom-6 -left-6 z-20 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 hidden sm:flex">
+              <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white">
+                <i data-lucide="microchip" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-800">Arduino & IoT</p>
+                <p class="text-[11px] text-slate-500">Lập trình vi điều khiển</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 3 -->
+            <div class="absolute -top-6 -right-6 z-20 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 hidden sm:flex">
+              <div class="w-10 h-10 rounded-xl bg-orange-500 flex items-center justify-center text-white">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-800">Cuộc thi KHKT</p>
+                <p class="text-[11px] text-slate-500">Đạt thành tích cấp Tỉnh</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-20 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
+          Giới thiệu về BSSRC
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
+          Môi Trường Ươm Mầm Đam Mê Sáng Tạo
+        </h2>
+        <p class="text-slate-600 mt-4 leading-relaxed text-sm md:text-base">
+          Câu lạc bộ Nghiên cứu khoa học, STEM và Robotics trường THPT Bắc Đông Quan được thành lập với mục tiêu xây dựng một sân chơi học thuật lành mạnh, năng động, giúp học sinh hiện thực hóa các ý tưởng khoa học thành những sản phẩm hữu ích.
+        </p>
+      </div>
+
+      <!-- Core Values / Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-all hover:shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="lightbulb" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Đam Mê Sáng Tạo</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Khuyến khích mỗi thành viên chủ động tư duy, dám nghĩ dám làm, biến những kiến thức lý thuyết trên lớp thành các phát minh và giải pháp thực tế.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-all hover:shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="wrench" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Học Đi Đôi Với Hành</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Trực tiếp bắt tay vào hàn mạch điện, lắp ráp khung robot, nạp code vi điều khiển và thử nghiệm mô hình trong điều kiện thực tế.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-all hover:shadow-lg group">
+          <div class="w-14 h-14 rounded-2xl bg-orange-100 text-orange-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="users" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Đoàn Kết & Chia Sẻ</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Các khóa anh chị đi trước tận tình hướng dẫn các em khóa sau, cùng nhau làm việc nhóm, chia sẻ tài liệu và rèn luyện kỹ năng mềm quý giá.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FIELDS / DOMAINS SECTION ================= -->
+  <section id="fields" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
+          Lĩnh Vực Hoạt Động
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
+          4 Trụ Cột Nòng Cốt Của BSSRC
+        </h2>
+        <p class="text-slate-600 mt-4 leading-relaxed text-sm md:text-base">
+          Mỗi thành viên khi tham gia CLB đều có thể lựa chọn chuyên môn phù hợp với thế mạnh và đam mê của bản thân.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Field 1: KHKT -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-5 shadow-md shadow-blue-600/20">
+              <i data-lucide="flask-conical" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-2">Nghiên Cứu KHKT</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Xây dựng đề tài nghiên cứu khoa học kỹ thuật dự thi các cấp, rèn luyện phương pháp luận khoa học, thu thập số liệu và viết báo cáo chuyên nghiệp.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 text-xs font-semibold text-blue-600 flex items-center gap-1">
+            <span>Cuộc thi KHKT các cấp</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Field 2: Robotics -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-600 text-white flex items-center justify-center mb-5 shadow-md shadow-cyan-600/20">
+              <i data-lucide="bot" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-2">Robotics & Cơ Điện Tử</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Thiết kế cơ khí mô hình, gia công khung gầm, tích hợp động cơ bước/servo, cảm biến khoảng cách và chế tạo các loại robot dò đường, robot cứu hộ.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 text-xs font-semibold text-cyan-600 flex items-center gap-1">
+            <span>Chế tạo Robot tự hành</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Field 3: STEM -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center mb-5 shadow-md shadow-orange-500/20">
+              <i data-lucide="layers" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-2">STEM & IoT Ứng Dụng</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Ứng dụng mạch Arduino, ESP32, cảm biến môi trường và kết nối Internet kết nối vạn vật (IoT) để giải quyết các bài toán thiết thực đời sống.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 text-xs font-semibold text-orange-600 flex items-center gap-1">
+            <span>Hệ thống IoT thông minh</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Field 4: Truyền Thông & Sự Kiện -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center mb-5 shadow-md shadow-indigo-600/20">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-2">Truyền Thông & Tổ Chức</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Quản trị trang Fanpage, thiết kế ấn phẩm đồ họa, tổ chức các buổi triển lãm STEM, workshop trải nghiệm thực tế cho toàn thể học sinh trong trường.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 text-xs font-semibold text-indigo-600 flex items-center gap-1">
+            <span>Lan tỏa tri thức khoa học</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SHOWCASE SECTION ================= -->
+  <section id="projects" class="py-20 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
+            Kho Dự Án & Sản Phẩm
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
+            Những Đề Tài & Sản Phẩm Tiêu Biểu
+          </h2>
+          <p class="text-slate-600 mt-2 text-sm md:text-base">
+            Lưu trữ các mô hình sáng tạo do chính các thế hệ học sinh BSSRC nghiên cứu và chế tạo.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap gap-2">
+          <button data-category="all" class="filter-btn active px-4 py-2 text-xs font-bold rounded-xl bg-blue-600 text-white shadow-md transition-all">
+            Tất cả
+          </button>
+          <button data-category="khkt" class="filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 transition-all">
+            Nghiên cứu KHKT
+          </button>
+          <button data-category="robotics" class="filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 transition-all">
+            Robotics
+          </button>
+          <button data-category="stem" class="filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 transition-all">
+            STEM & Ứng dụng
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Projects Grid (Rendered by main.js) -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ACHIEVEMENTS TIMELINE ================= -->
+  <section id="achievements" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Side: Header & Context -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-600 bg-orange-50 border border-orange-200 px-3 py-1 rounded-full">
+            Bảng Vàng Thành Tích
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+            Những Dấu Ấn Đáng Tự Hào Của Thầy & Trò
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+            Mỗi giải thưởng là minh chứng cho sự kiên trì, đam mê tìm tòi không mệt mỏi của các thành viên CLB cùng sự chỉ dẫn tận tình từ các thầy cô cố vấn trường THPT Bắc Đông Quan.
+          </p>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
+            <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+              <i data-lucide="medal" class="w-5 h-5 text-orange-500"></i>
+              Mục tiêu giai đoạn tới
+            </h4>
+            <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
+              <li>Tiếp tục nâng cao chất lượng đề tài tham gia Cuộc thi KHKT cấp Tỉnh.</li>
+              <li>Chế tạo thêm nhiều robot thi đấu tham gia các giải mở rộng.</li>
+              <li>Nhân rộng mô hình STEM tới các khối lớp trong toàn trường.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side: Timeline List (Rendered by main.js) -->
+        <div class="lg:col-span-7">
+          <div id="achievements-list" class="space-y-2">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= GALLERY / ACTIVITIES ================= -->
+  <section id="gallery" class="py-20 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
+          Hình Ảnh Hoạt Động
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
+          Khoảnh Khắc Sáng Tạo Cùng BSSRC
+        </h2>
+        <p class="text-slate-600 mt-4 leading-relaxed text-sm md:text-base">
+          Những giờ phút miệt mài bên bàn kỹ thuật, thử nghiệm robot và cùng nhau vỡ òa niềm vui khi sản phẩm vận hành thành công.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] bg-slate-900 shadow-md">
+          <img 
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" 
+            alt="Buổi thảo luận ý tưởng KHKT" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
+            <h4 class="font-bold text-sm">Thảo Luận Đề Tài Mới</h4>
+            <p class="text-xs text-slate-300">Buổi sinh hoạt định kỳ tại phòng thực hành</p>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] bg-slate-900 shadow-md">
+          <img 
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" 
+            alt="Lắp ráp robot và mạch điều khiển" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
+            <h4 class="font-bold text-sm">Chế Tạo Khung Gầm Robot</h4>
+            <p class="text-xs text-slate-300">Thử nghiệm động cơ và cảm biến quang</p>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] bg-slate-900 shadow-md">
+          <img 
+            src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" 
+            alt="Ngày hội STEM trường" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
+            <h4 class="font-bold text-sm">Triển Lãm Ngày Hội STEM</h4>
+            <p class="text-xs text-slate-300">Trình diễn sản phẩm trước toàn trường</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & CONNECT ================= -->
+  <section id="contact" class="py-20 bg-slate-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-blue-700 via-blue-800 to-slate-900 rounded-3xl p-8 md:p-14 text-white shadow-2xl relative overflow-hidden">
+        
+        <!-- Background light sphere -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-500/20 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <span class="inline-block text-xs font-bold uppercase tracking-wider bg-white/10 text-cyan-300 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10">
+              Kết Nối Cùng BSSRC
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
+              Bạn Có Ý Tưởng Khoa Học Hoặc Cần Hỗ Trợ Kỹ Thuật?
+            </h2>
+            <p class="text-blue-100 text-sm md:text-base leading-relaxed">
+              Hãy liên hệ ngay với Ban chủ nhiệm CLB BSSRC hoặc gửi tin nhắn trực tiếp qua Fanpage chính thức để được trao đổi và giao lưu nhé!
+            </p>
+
+            <!-- Channels -->
+            <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <!-- Fanpage -->
+              <a id="contact-fanpage" href="https://facebook.com" target="_blank" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-md transition-all flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <i data-lucide="facebook" class="w-5 h-5"></i>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="text-xs text-blue-200">Trang Fanpage</p>
+                  <p id="fanpage-name" class="text-sm font-bold truncate">CLB STEM BSSRC THPT Bắc Đông Quan</p>
+                </div>
+              </a>
+
+              <!-- Email -->
+              <a id="contact-email" href="mailto:bssrc.thptbacdongquan@gmail.com" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-md transition-all flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-red-500 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="text-xs text-blue-200">Email CLB</p>
+                  <p id="email-address" class="text-sm font-bold truncate">bssrc.thptbacdongquan@gmail.com</p>
+                </div>
+              </a>
+
+              <!-- Phone -->
+              <a id="contact-phone" href="tel:0123456789" class="p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-md transition-all flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <i data-lucide="phone-call" class="w-5 h-5"></i>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="text-xs text-blue-200">Số Điện Thoại Liên Hệ</p>
+                  <p id="phone-number" class="text-sm font-bold truncate">0123 456 789</p>
+                </div>
+              </a>
+
+              <!-- School Address -->
+              <div class="p-4 rounded-xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="text-xs text-blue-200">Địa Chỉ</p>
+                  <p class="text-sm font-bold truncate">Trường THPT Bắc Đông Quan, Thái Bình</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Callout box -->
+          <div class="lg:col-span-5 bg-white/10 backdrop-blur-xl border border-white/15 p-6 md:p-8 rounded-2xl space-y-4 text-center">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-cyan-400 to-blue-500 flex items-center justify-center text-white shadow-lg">
+              <i data-lucide="send" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-lg font-bold">Tham Gia Đội Ngũ BSSRC</h3>
+            <p class="text-xs text-blue-100 leading-relaxed">
+              Bạn là học sinh THPT Bắc Đông Quan và yêu thích sáng tạo khoa học? Hãy ghé thăm fanpage hoặc nhắn tin cho CLB để cập nhật đợt tuyển thành viên mới nhất nhé!
+            </p>
+            <a id="btn-message-fanpage" href="https://facebook.com" target="_blank" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-white text-blue-800 font-bold text-sm rounded-xl hover:bg-blue-50 transition-colors shadow-md">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Nhắn Tin Fanpage Ngay</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-slate-200 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-700 flex items-center justify-center text-white">
+            <i data-lucide="bot" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-800 font-tech">BSSRC - THPT Bắc Đông Quan</h4>
+            <p class="text-xs text-slate-500">CLB Nghiên cứu khoa học, STEM và Robotics</p>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-500">
+          © 2026 BSSRC - Trường THPT Bắc Đông Quan. Mọi quyền được bảo lưu.
+        </p>
+
+        <div class="flex items-center gap-4 text-slate-400">
+          <a href="#home" class="text-xs text-slate-600 hover:text-blue-600">Lên đầu trang ↑</a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT DETAIL MODAL ================= -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden modal-enter-active relative" id="modal-content">
+      <!-- Injected by main.js openProjectModal() -->
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
