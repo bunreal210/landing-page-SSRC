@@ -22,7 +22,7 @@ const projectsData = [
     categoryName: "Nền tảng Quản lý",
     badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
     summary: "Hệ thống số hóa chuyển đổi số phòng Lab STEM: Đặt lịch phòng, quản lý kho vật tư/linh kiện, mượn trả thiết bị và diễn đàn học thuật AI.",
-    image: "https://drive.google.com/file/d/1dhOBH4Q4rZoWvvWIqrcSelfrHZ4QDYbl/view?usp=sharing",
+    image: "assets/images/dashboard_student.png",
     tech: ["Node.js", "Express 5", "better-sqlite3", "Gemini AI", "Session Auth", "REST API"],
     year: "2026-2027",
     authors: "Phạm Công Vinh (A5-K58) - Nguyễn Huyền Trang (A5-K59)",
@@ -319,7 +319,7 @@ function openProjectModal(id) {
 
   modalContent.innerHTML = `
     <div class="relative h-64 md:h-80 w-full overflow-hidden bg-slate-900 rounded-t-2xl">
-      <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover opacity-85">
+      <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
       <button onclick="closeProjectModal()" class="absolute top-4 right-4 bg-white/80 hover:bg-white text-slate-800 p-2 rounded-full backdrop-blur-md shadow-lg transition-transform hover:scale-110">
         <i data-lucide="x" class="w-5 h-5"></i>
