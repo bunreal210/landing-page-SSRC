@@ -10,7 +10,9 @@ const CLUB_CONFIG = {
   email: "bdq.stemlab@gmail.com",
   phone: "098 455 2238",
   fanpageUrl: "https://www.facebook.com/bdq.ssrc",
-  fanpageName: "Câu lạc bộ Nghiên cứu khoa học, STEM và Robotics trường THPT Bắc Đông Quan"
+  fanpageName: "Câu lạc bộ Nghiên cứu khoa học, STEM và Robotics trường THPT Bắc Đông Quan",
+  schoolFanpageUrl: "https://www.facebook.com/profile.php?id=100057015537215",
+  newsUrl: "https://news-stem.pages.dev/"
 };
 
 // 1. DỮ LIỆU DỰ ÁN TIÊU BIỂU (Dễ dàng thêm / sửa / xóa)

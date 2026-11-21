@@ -144,14 +144,19 @@
           </p>
 
           <!-- Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#projects" class="px-6 py-3.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-lg shadow-blue-600/25 hover:shadow-blue-600/35 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 sm:gap-4 pt-2">
+            <a href="#projects" class="px-5 sm:px-6 py-3.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-lg shadow-blue-600/25 hover:shadow-blue-600/35 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
               <i data-lucide="cpu" class="w-4 h-4"></i>
               <span>Khám Phá Dự Án</span>
             </a>
-            <a href="#achievements" class="px-6 py-3.5 text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-xs transition-all flex items-center gap-2">
+            <a href="#achievements" class="px-5 sm:px-6 py-3.5 text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-xs transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
               <i data-lucide="trophy" class="w-4 h-4 text-orange-500"></i>
               <span>Bảng Vàng Thành Tích</span>
+            </a>
+            <a href="https://news-stem.pages.dev/" target="_blank" rel="noopener noreferrer" class="px-5 sm:px-6 py-3.5 text-sm font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-xl shadow-xs transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <i data-lucide="newspaper" class="w-4 h-4 text-emerald-600"></i>
+              <span>Trang Tin Tức CLB</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-500"></i>
             </a>
           </div>
 
@@ -691,48 +696,80 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-white border-t border-slate-200 py-10">
+  <footer class="bg-white border-t border-slate-200 pt-12 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      
+      <!-- Top Row: Brand Info & Official Links -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-8 border-b border-slate-100 items-start">
         
-        <!-- Logo & School Name (Không chèn nền vào logo) -->
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 flex items-center justify-center shrink-0">
-            <img src="assets/images/logo.png" alt="Logo BSSRC" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-            <i data-lucide="bot" class="w-6 h-6 text-blue-600 hidden"></i>
+        <!-- Left: Logo & School Info -->
+        <div class="lg:col-span-6 space-y-3 text-center lg:text-left">
+          <div class="flex items-center justify-center lg:justify-start gap-3">
+            <div class="w-11 h-11 flex items-center justify-center shrink-0">
+              <img src="assets/images/logo.png" alt="Logo BSSRC" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+              <i data-lucide="bot" class="w-7 h-7 text-blue-600 hidden"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 font-tech text-base sm:text-lg">BSSRC - THPT Bắc Đông Quan</h4>
+              <p class="text-xs text-slate-500 font-medium">CLB Nghiên cứu khoa học, STEM và Robotics</p>
+            </div>
           </div>
-          <div>
-            <h4 class="font-bold text-slate-800 font-tech">BSSRC - THPT Bắc Đông Quan</h4>
-            <p class="text-xs text-slate-500">CLB Nghiên cứu khoa học, STEM và Robotics</p>
-          </div>
-        </div>
-
-        <!-- Copyright & Thông tin Tác giả -->
-        <div class="flex flex-col items-center md:items-start gap-1 text-xs text-slate-500">
-          <p>© 2026 BSSRC - Trường THPT Bắc Đông Quan. Mọi quyền được bảo lưu.</p>
-          <p class="flex items-center gap-1.5 text-slate-600">
-            <span>Tác giả:</span>
-            <a href="https://facebook.com/bunreal210" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-1 transition-colors hover:underline">
-              <svg class="w-3.5 h-3.5 text-[#1877F2] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
-              <span>Phạm Công Vinh</span>
-            </a>
+          <p class="text-xs text-slate-500 max-w-md mx-auto lg:mx-0 leading-relaxed">
+            Sân chơi học thuật khơi nguồn đam mê sáng tạo khoa học, chế tạo mô hình robot và chuyển đổi số cho học sinh trường THPT Bắc Đông Quan.
           </p>
         </div>
 
-        <!-- Fanpage & Lên đầu trang -->
-        <div class="flex items-center gap-4 text-xs font-medium">
-          <a id="footer-fanpage" href="https://www.facebook.com/bdq.ssrc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-slate-600 hover:text-blue-600 font-medium transition-colors">
-            <svg class="w-4 h-4 text-[#1877F2] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
-            <span>Fanpage CLB</span>
+        <!-- Right: Links Section -->
+        <div class="lg:col-span-6 flex flex-col sm:flex-row lg:justify-end items-center sm:items-start gap-6 sm:gap-10 text-center sm:text-left">
+          <div class="space-y-3">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Kênh truyền thông & Liên kết</p>
+            <div class="flex flex-col gap-2.5 text-xs font-semibold">
+              
+              <!-- 1. Fanpage CLB -->
+              <a id="footer-fanpage" href="https://www.facebook.com/bdq.ssrc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center sm:justify-start gap-2 text-slate-700 hover:text-blue-600 transition-colors">
+                <svg class="w-4 h-4 text-[#1877F2] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
+                <span>Fanpage CLB BSSRC</span>
+              </a>
+
+              <!-- 2. Fanpage Nhà Trường -->
+              <a href="https://www.facebook.com/profile.php?id=100057015537215" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center sm:justify-start gap-2 text-slate-700 hover:text-blue-600 transition-colors">
+                <svg class="w-4 h-4 text-[#1877F2] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
+                <span>Fanpage Trường THPT Bắc Đông Quan</span>
+              </a>
+
+              <!-- 3. Trang Tin Tức CLB -->
+              <a href="https://news-stem.pages.dev/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center sm:justify-start gap-2 text-emerald-700 hover:text-emerald-800 transition-colors">
+                <i data-lucide="newspaper" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Trang Tin Tức CLB</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-500"></i>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Row: Copyright, Author & Back to Top -->
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left">
+        <p>© 2026 BSSRC - Trường THPT Bắc Đông Quan. Mọi quyền được bảo lưu.</p>
+
+        <p class="flex items-center gap-1.5 text-slate-600">
+          <span>Tác giả:</span>
+          <a href="https://facebook.com/bunreal210" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-1 transition-colors hover:underline">
+            <svg class="w-3.5 h-3.5 text-[#1877F2] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
+            <span>Phạm Công Vinh</span>
           </a>
-          <span class="text-slate-300">•</span>
-          <a href="#home" class="text-slate-600 hover:text-blue-600 inline-flex items-center gap-1 transition-colors">
+        </p>
+
+        <div>
+          <a href="#home" class="text-slate-600 hover:text-blue-600 inline-flex items-center gap-1.5 transition-colors font-medium">
             <span>Lên đầu trang</span>
             <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
           </a>
         </div>
-
       </div>
+
     </div>
   </footer>
 
